@@ -1,19 +1,19 @@
 <?php
 
 /*
-@package (theme_name)
+@package far
 =========================
 Theme Support Options
 =========================
 */
 
 /*MENUS */
-function (theme_name)_theme_setup()
+function far_theme_setup()
 {
   add_theme_support('menus');
   register_nav_menu('main', 'Main Menu');
 }
-add_action('init', '(theme_name)_theme_setup');
+add_action('init', 'far_theme_setup');
 
 /*POSTS and FORMATS*/
 add_theme_support('custom-background');

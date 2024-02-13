@@ -1,7 +1,7 @@
 <?php
 
 /*
-@package (theme_name)
+@package far
 =========================
 REMOVE GENERATOR VERSION NUMBER
 =========================

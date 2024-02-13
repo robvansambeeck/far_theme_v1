@@ -1,6 +1,6 @@
 <?php
 /*
-@package (theme_name)
+@package far
 =========================
 front-page.php
 

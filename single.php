@@ -1,6 +1,6 @@
 <?php
 /*
-@package (theme_name)
+@package far
 =========================
 single.php
 
