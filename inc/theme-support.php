@@ -22,3 +22,4 @@ add_theme_support('post-thumbnails');
 add_theme_support('post-formats', array('aside', 'image', 'video', 'gallery'));
 add_theme_support('hmtl5', array('search-form'));
 add_post_type_support('page', 'excerpt');
+add_theme_support('custom-logo');

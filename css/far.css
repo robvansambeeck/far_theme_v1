@@ -1,0 +1,305 @@
+@charset "UTF-8";
+/***
+    The new CSS reset - version 1.8.4 (last updated 14.2.2023)
+    GitHub page: https://github.com/elad2412/the-new-css-reset
+***/
+/*
+    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+    - The "symbol *" part is to solve Firefox SVG sprite bug
+ */
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+  all: unset;
+  display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reapply the pointer cursor for anchor tags */
+a, button {
+  cursor: revert;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol, ul, menu {
+  list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+  max-inline-size: 100%;
+  max-block-size: 100%;
+}
+
+/* removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
+}
+
+/* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
+input, textarea {
+  -webkit-user-select: auto;
+}
+
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+  white-space: revert;
+}
+
+/* minimum style to allow to style meter element */
+meter {
+  -webkit-appearance: revert;
+  appearance: revert;
+}
+
+/* preformatted text - use only for this feature */
+:where(pre) {
+  all: revert;
+}
+
+/* reset default text opacity of input placeholder */
+::placeholder {
+  color: unset;
+}
+
+/* remove default dot (•) sign */
+::marker {
+  content: initial;
+}
+
+/* fix the feature of 'hidden' attribute.
+   display:revert; revert to element instead of attribute */
+:where([hidden]) {
+  display: none;
+}
+
+/* revert for bug in Chromium browsers
+   - fix for the content editable attribute will work properly.
+   - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
+:where([contenteditable]:not([contenteditable=false])) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  -webkit-line-break: after-white-space;
+  -webkit-user-select: auto;
+}
+
+/* apply back the draggable feature - exist only in Chromium and Safari */
+:where([draggable=true]) {
+  -webkit-user-drag: element;
+}
+
+/* Revert Modal native behavior */
+:where(dialog:modal) {
+  all: revert;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.wp-block-columns {
+  grid-gap: 60px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 24px;
+  color: #141414;
+  text-align: justify;
+}
+
+h1 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  color: #3A4835;
+  font-style: regular;
+}
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 1rem;
+  }
+}
+
+h2 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  color: #3A4835;
+}
+@media only screen and (max-width: 768px) {
+  h2 {
+    font-size: 0.8rem;
+  }
+}
+
+h3 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  color: #3A4835;
+  font-style: normal;
+  padding-bottom: 1rem;
+}
+@media only screen and (max-width: 768px) {
+  h3 {
+    font-size: 0.8rem;
+    line-height: 30px;
+  }
+}
+
+p {
+  font-weight: 200;
+  line-height: 1.75rem;
+  font-style: normal;
+  padding-bottom: 1.75rem;
+  color: #141414;
+  letter-spacing: 0.5px;
+}
+
+a {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  line-height: 35px;
+  color: #41533F;
+  font-size: inherit;
+  letter-spacing: 0.5px;
+}
+
+ul {
+  display: block;
+  text-align: center;
+  line-height: 2rem;
+}
+
+li {
+  list-style-position: inside;
+  list-style-type: disc;
+  font-weight: 200;
+  font-size: 1.25rem !important;
+}
+
+strong {
+  font-weight: 600;
+}
+
+.nav-main {
+  position: -webkit-sticky; /* For Safari */
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Ensure nav stays on top of other content */
+}
+.nav-main .nav-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  height: 15vh;
+  max-height: 150px;
+  padding: 30px 0;
+}
+.nav-main .nav-items .col {
+  display: flex;
+}
+.nav-main .nav-items .nav-toggle {
+  justify-content: flex-start;
+}
+.nav-main .nav-items .nav-logo {
+  justify-content: center;
+  overflow: hidden;
+}
+.nav-main .nav-items .nav-logo img {
+  max-width: 200px;
+  height: auto;
+  max-height: 90px;
+}
+.nav-main .nav-items .nav-cta {
+  justify-content: flex-end;
+}
+.nav-main .nav-items .nav-cta .btn {
+  display: none;
+}
+
+.nav-cta-active .nav-cta .btn {
+  display: block !important;
+}
+
+.btn {
+  background-color: transparent;
+  max-width: 300px;
+  min-width: 200px;
+  border-radius: 0px;
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 0 1rem;
+  font-weight: 400;
+  display: grid;
+  place-items: center;
+  font-style: normal;
+  letter-spacing: 1px;
+  text-shadow: none;
+  transition: background-color 0.3s ease;
+  border: 2px solid transparent;
+}
+@media only screen and (max-width: 768px) {
+  .btn {
+    font-size: 0.9rem;
+  }
+}
+
+.btn-fill {
+  color: #fff;
+  background-color: #41533F;
+  border: 1px solid #41533F;
+}
+@media only screen and (max-width: 768px) {
+  .btn-fill {
+    width: 100%;
+  }
+}
+.btn-fill:hover {
+  background-color: #fff;
+  border-color: #41533F;
+  color: #41533F;
+}
+
+.btn-empty {
+  color: #41533F;
+  background-color: transparent;
+  border: 1px solid #41533F;
+}
+@media only screen and (max-width: 768px) {
+  .btn-empty {
+    width: 100%;
+  }
+}
+.btn-empty:hover {
+  background-color: #41533F;
+  border: 2px solid #41533F;
+  color: #fff !important;
+  transition: 0.5s ease-in-out;
+}
+
+.btn-block {
+  margin: 0 auto;
+  width: auto;
+  min-width: 200px;
+  max-width: 25%;
+}
+
+/*# sourceMappingURL=far.css.map */
