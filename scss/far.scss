@@ -111,7 +111,7 @@ meter {
 ////////////////////////
 
 //layout
-$container-base: 1200px;
+$container-base: 1800px;
 
 //spacing
 $padding-base: 15px;
@@ -288,6 +288,9 @@ strong {
     width: 100%;
     top: 0;
     z-index: $z-nav;
+    .nav-inner {
+        overflow: visible;
+    }
     .nav-items {
         display: grid;
         grid-template-columns: repeat(3,1fr);
@@ -302,12 +305,13 @@ strong {
             justify-content: flex-start;
         }
         .nav-logo {
+            margin-top: $padding-base*4;
             justify-content: center;
             overflow: hidden;
             img {
-                max-width: 200px;
+                max-width: 500px;
                 height: auto;
-                max-height: 90px;
+                max-height: 500px;
             }
         }
         .nav-cta {

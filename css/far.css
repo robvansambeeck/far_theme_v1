@@ -102,7 +102,7 @@ meter {
   margin-top: -15vh;
 }
 .container {
-  max-width: 1200px;
+  max-width: 1800px;
   margin: 0 auto;
   overflow: hidden;
   padding: 0 30px;
@@ -209,6 +209,9 @@ strong {
   top: 0;
   z-index: 5000;
 }
+.nav-main .nav-inner {
+  overflow: visible;
+}
 .nav-main .nav-items {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -224,13 +227,14 @@ strong {
   justify-content: flex-start;
 }
 .nav-main .nav-items .nav-logo {
+  margin-top: 60px;
   justify-content: center;
   overflow: hidden;
 }
 .nav-main .nav-items .nav-logo img {
-  max-width: 200px;
+  max-width: 500px;
   height: auto;
-  max-height: 90px;
+  max-height: 500px;
 }
 .nav-main .nav-items .nav-cta {
   justify-content: flex-end;
