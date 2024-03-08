@@ -98,10 +98,14 @@ meter {
   all: revert;
 }
 
+.page-wrapper {
+  margin-top: -15vh;
+}
 .container {
   max-width: 1200px;
   margin: 0 auto;
   overflow: hidden;
+  padding: 0 30px;
 }
 
 .wp-block-columns {
@@ -122,7 +126,7 @@ h1 {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 3px;
-  font-size: 1.5rem;
+  font-size: 2rem;
   line-height: 2.5rem;
   color: #3A4835;
   font-style: regular;
@@ -200,10 +204,10 @@ strong {
 }
 
 .nav-main {
-  position: -webkit-sticky; /* For Safari */
   position: sticky;
+  width: 100%;
   top: 0;
-  z-index: 1000; /* Ensure nav stays on top of other content */
+  z-index: 5000;
 }
 .nav-main .nav-items {
   display: grid;
@@ -237,6 +241,43 @@ strong {
 
 .nav-cta-active .nav-cta .btn {
   display: block !important;
+}
+
+.nav-logo-large .nav-logo {
+  display: none !important;
+}
+
+.nav-footer {
+  background-color: #41533F;
+}
+.nav-footer .nav-items ul {
+  padding: 30px 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  grid-gap: 15px;
+}
+@media only screen and (max-width: 850px) {
+  .nav-footer .nav-items ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+.nav-footer .nav-items ul a,
+.nav-footer .nav-items ul p,
+.nav-footer .nav-items ul li {
+  color: #fff;
+  font-size: 0.95rem;
+  text-align: left;
+}
+.nav-footer .nav-items ul li {
+  list-style: none;
+}
+
+.credits {
+  color: #fff;
+  font-size: 0.8rem;
+  text-align: center;
 }
 
 .btn {
@@ -295,11 +336,44 @@ strong {
   transition: 0.5s ease-in-out;
 }
 
-.btn-block {
+.btn-snippet {
   margin: 0 auto;
   width: auto;
   min-width: 200px;
   max-width: 25%;
+}
+
+.block-logo {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  grid-gap: 60px;
+}
+@media only screen and (max-width: 850px) {
+  .block-logo {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+.block-intro .btn-snippet {
+  margin: 0;
+}
+
+.block-timetable .wp-block-column:nth-child(1) {
+  background-color: #F8FBEF;
+}
+.block-timetable .wp-block-column:nth-child(2) {
+  background-color: #EFF6DF;
+}
+.block-timetable .wp-block-column:nth-child(3) {
+  background-color: #F8FBEF;
+}
+.block-timetable .wp-block-column {
+  background-color: #41533F;
+  border-radius: 180px;
+}
+
+.gform_wrapper .gform_title {
+  display: none;
 }
 
 /*# sourceMappingURL=far.css.map */

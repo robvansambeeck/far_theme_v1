@@ -13,6 +13,11 @@ Template Post Type: page
 */
 ?>
 
-<h1>
-    page 404
-</h1>
+<?php get_header(); ?>
+<?php get_template_part('parts/nav-main'); ?>
+<div class="page-wrapper page home">
+    <main class="page-content">
+        <?php the_content(''); ?>
+    </main>
+</div>
+<?php get_footer(); ?>

@@ -131,9 +131,9 @@ $font-medium: 500;
 $font-bold: 600;
 
 //colors
-$color-dark: #2E2925; //coffee
-$color-medium: #382b25; //mocha
-$color-light: #85695b; //full sand
+$color-dark: #41533F; //theme cta
+$color-medium: #EFF6DF; //mint
+$color-light: #F8FBEF; // apple
 $color-extra-light: #baac9e; //mild sand
 
 
@@ -172,6 +172,7 @@ $z-modal: 10000;
 /// ////////////////////
 
 .page-wrapper {
+    margin-top: -15vh;
     .page-content {
   
     }
@@ -181,6 +182,7 @@ $z-modal: 10000;
     max-width: $container-base;
     margin: 0 auto;
     overflow: hidden;
+    padding: 0 $padding-base*2;
 }
 
 .wp-block-columns {
@@ -205,7 +207,7 @@ h1 {
     font-weight: $font-bold;
     text-transform: uppercase;
     letter-spacing: 3px;
-    font-size: 1.5rem;
+    font-size: 2rem;
     line-height: 2.5rem;
     color: $color-heading-dark;
     font-style: regular;
@@ -282,10 +284,10 @@ strong {
 ////////////////////////
 
 .nav-main {
-    position: -webkit-sticky; /* For Safari */
     position: sticky;
+    width: 100%;
     top: 0;
-    z-index: 1000; /* Ensure nav stays on top of other content */
+    z-index: $z-nav;
     .nav-items {
         display: grid;
         grid-template-columns: repeat(3,1fr);
@@ -317,12 +319,55 @@ strong {
     }
 }
 
+// nav-cta active when scrolled
 .nav-cta-active {
     .nav-cta {
         .btn {
             display: block !important;
         }
     }
+}
+
+// nav-logo large when on page over ons
+
+.nav-logo-large {
+    .nav-logo {
+        display: none !important;
+    }
+}
+
+.nav-footer { 
+background-color: $color-cta;
+.nav-items {
+    ul {
+    padding: $padding-base*2 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    grid-gap: $padding-base*1;
+    @media only screen and (max-width: 850px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    a,
+    p, 
+    li {
+        color: $color-txt-light;
+        font-size: 0.95rem;
+        text-align: left;
+    }
+    li {
+        list-style: none;
+    }
+
+    }
+}
+}
+
+.credits {
+    color: $color-txt-light;
+    font-size: 0.8rem;
+    text-align: center;
 }
 
 // button generic 
@@ -344,7 +389,6 @@ strong {
     border: 2px solid transparent;
     @media only screen and (max-width: 768px) {
         font-size: .9rem;
-        // max-width: 250px;
     }
 }
 
@@ -379,9 +423,64 @@ strong {
     }
 }
 
-.btn-block {
+////////////////////////
+/// blocks
+////////////////////////
+
+.btn-snippet {
     margin: 0 auto;
     width: auto;
     min-width: 200px;
     max-width: 25%;
+}
+
+////////////////////////
+/// blocks
+////////////////////////
+
+.block-logo {
+    display: grid !important; 
+    grid-template-columns: repeat(4, 1fr) !important;
+    grid-gap: $padding-base*4;
+    @media only screen and (max-width: 850px) {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+.block-intro {
+    .btn-snippet {
+        margin: 0;
+    }
+}
+
+.block-timetable {
+    // Target the first .wp-block-column specifically
+    .wp-block-column:nth-child(1) {
+        background-color: $color-light; // Example: Set the background color to blue for the second column
+    }
+    
+    // Target the second .wp-block-column
+    .wp-block-column:nth-child(2) {
+        background-color: $color-medium; // Example: Set the background color to blue for the second column
+    }
+    
+    // Target the third .wp-block-column
+    .wp-block-column:nth-child(3) {
+        background-color: $color-light; // Example: Set the background color to green for the third column
+    }
+
+    .wp-block-column {
+        background-color: $color-cta; // Applies to all .wp-block-column but will be overridden for the first, second, and third children by the rules above
+        border-radius: 180px;
+    }
+}
+
+
+
+////////////////////////
+/// forms
+////////////////////////
+
+.gform_wrapper .gform_title {
+    display: none;
 }

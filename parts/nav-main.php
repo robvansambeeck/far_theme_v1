@@ -1,4 +1,4 @@
-<div class="nav-main">
+<div id="nav-main" class="nav-main">
     <div class="nav-inner container">
         <div class="nav-items">
             <div class="col nav-toggle">

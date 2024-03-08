@@ -11,7 +11,12 @@ Theme Support Options
 function far_theme_setup()
 {
   add_theme_support('menus');
-  register_nav_menu('main', 'Main Menu');
+  register_nav_menus(
+    array(
+      'header-menu' => __('Main Menu'),
+      'footer-menu' => __('Footer Menu')
+    )
+  );
 }
 add_action('init', 'far_theme_setup');
 
