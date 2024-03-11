@@ -120,10 +120,8 @@ $padding-base: 15px;
 $grid-gap: 2rem;
 
 //font-family
-// $font-heading: 'Open Sans', sans-serif;
-// $font-body: 'Open Sans', sans-serif;
-$font-heading:'Open Sans', sans-serif;
-$font-body: 'Open Sans', sans-serif; 
+$font-heading:'Rye', serif;
+$font-body: 'Barlow', sans-serif; 
 
 $font-thin: 200;
 $font-regular: 400;
@@ -131,23 +129,21 @@ $font-medium: 500;
 $font-bold: 600;
 
 //colors
-$color-dark: #41533F; //theme cta
-$color-medium: #EFF6DF; //mint
-$color-light: #F8FBEF; // apple
-$color-extra-light: #baac9e; //mild sand
-
+$color-dark: rgb(45, 45, 45); //theme cta
+$color-medium: #faeddb;
+$color-light: #fdf8f2; 
 
 $color-bg-dark: #2E2925; //coffee
 $color-bg-light: #f3f3f3; //light beige
 
 // cta colors
-$color-cta: #41533F; // cta
-$color-cta-hover: #fff; // cta hover
+$color-cta: #A1110C; // cta
+$color-cta-hover: #740E0A; // cta hover
 
 
 // text colors dark
-$color-heading-dark: #3A4835; // heading dark text
-$color-txt-dark: #141414; // paragraph text
+$color-heading-dark: #222222; // heading dark text
+$color-txt-dark: #222222; // paragraph text
 
 // text colors light
 $color-heading-light: #fff; // heading light text
