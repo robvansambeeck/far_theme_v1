@@ -14,7 +14,8 @@ function far_theme_setup()
   register_nav_menus(
     array(
       'header-menu' => __('Main Menu'),
-      'footer-menu' => __('Footer Menu')
+      'footer-menu' => __('Footer Menu'),
+      'side-menu' => __('Side Menu')
     )
   );
 }

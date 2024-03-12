@@ -133,7 +133,7 @@ $color-dark: rgb(45, 45, 45); //theme cta
 $color-medium: #faeddb;
 $color-light: #fdf8f2; 
 
-$color-bg-dark: #2E2925; //coffee
+$color-bg-dark: #3a342f;
 $color-bg-light: #f3f3f3; //light beige
 
 // cta colors
@@ -179,6 +179,9 @@ $z-modal: 10000;
     margin: 0 auto;
     overflow: hidden;
     padding: 0 $padding-base*2;
+    @media only screen and (max-width: 768px) {
+        padding: 0 15px;
+    }
 }
 
 .wp-block-columns {
@@ -192,8 +195,7 @@ $z-modal: 10000;
 body {
     font-family: $font-body;
     font-weight: $font-regular;
-    font-size: 1rem;
-    line-height: 24px;
+    font-size: 1.2rem;
     color: $color-txt-dark;
     text-align: justify;
 }
@@ -203,13 +205,14 @@ h1 {
     font-weight: $font-bold;
     text-transform: uppercase;
     letter-spacing: 3px;
-    font-size: 2rem;
-    line-height: 2.5rem;
+    font-size: 50px;
+    line-height: 100px;
     color: $color-heading-dark;
     font-style: regular;
     @media only screen and (max-width: 992px) { }
 @media only screen and (max-width: 768px) {
-    font-size: 1rem;
+    font-size:1.8rem;
+    line-height: 60px;
 }
     }
     
@@ -218,19 +221,19 @@ h2 {
     font-weight: $font-medium;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    font-size: 1.5rem;
-    line-height: 2.25rem;
+    font-size: 30px;
+    line-height: 40px;
     color: $color-heading-dark;
     @media only screen and (max-width: 768px) {
-        font-size: .8rem;
+        font-size: 1rem;
     }
 }
 
 h3 {
-    font-family: $font-body;
+    font-family: $font-heading;
     font-weight: $font-medium;
     letter-spacing: 1px;
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: $color-heading-dark;
     font-style: normal;
     padding-bottom: 1rem;
@@ -242,7 +245,7 @@ h3 {
 
 p{
     font-weight: $font-thin;
-    line-height: 1.75rem;
+    line-height: 2rem;
     font-style: normal;
     padding-bottom: 1.75rem;
     color: $color-txt-dark;
@@ -282,6 +285,7 @@ strong {
 .nav-main {
     position: sticky;
     width: 100%;
+    height: 100%;
     top: 0;
     z-index: $z-nav;
     .nav-inner {
@@ -305,9 +309,13 @@ strong {
             justify-content: center;
             overflow: hidden;
             img {
-                max-width: 500px;
+                // max-width: 500px;
                 height: auto;
                 max-height: 500px;
+                @media only screen and (max-width: 768px) {
+                   height: 100px;
+                   width: auto;
+                }
             }
         }
         .nav-cta {
@@ -321,12 +329,15 @@ strong {
 
 // nav-cta active when scrolled
 .nav-cta-active {
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: background-color 0.3s ease;
     .nav-cta {
         .btn {
             display: block !important;
         }
     }
 }
+
 
 // nav-logo large when on page over ons
 
@@ -335,9 +346,11 @@ strong {
         display: none !important;
     }
 }
+ 
 
+  //footer
 .nav-footer { 
-background-color: $color-cta;
+background-color: $color-bg-dark;
 .nav-items {
     ul {
     padding: $padding-base*2 0;
@@ -442,6 +455,7 @@ background-color: $color-cta;
     display: grid !important; 
     grid-template-columns: repeat(4, 1fr) !important;
     grid-gap: $padding-base*4;
+    filter: grayscale(1);
     @media only screen and (max-width: 850px) {
         grid-template-columns: repeat(2, 1fr) !important;
     }
@@ -475,6 +489,17 @@ background-color: $color-cta;
     }
 }
 
+// wp block
+.wp-block-cover .container {
+    @media only screen and (max-width: 768px) {
+        height: 450px;
+    }
+}
+.wp-block-cover .wp-block-cover__image-background {
+    @media only screen and (max-width: 768px) {
+        height: 20%;
+    }
+}
 
 
 ////////////////////////

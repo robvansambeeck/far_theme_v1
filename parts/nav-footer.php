@@ -6,7 +6,7 @@
             ?>
         </div>
         <p class="credits">
-            Development en Design Rdd Rock <?php echo '&copy;'; ?>
+            Development en Design Red Rock <?php echo '&copy;'; ?>
             <?php echo date('Y'); ?>
         </p>
     </div>

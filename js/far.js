@@ -9,14 +9,17 @@ console.log("js start");
 window.addEventListener('scroll', function() {
     // Get the navigation element by its class name
     var navMain = document.querySelector('.nav-main');
+    var navLogo = document.querySelector('.nav-logo');
 
     // Check if the page is scrolled more than 400 pixels
     if (window.scrollY > 500) {
         // Add the 'nav-cta-active' class to the nav-main element
         navMain.classList.add('nav-cta-active');
+        navLogo.style.width = '100px';
     } else {
         // Remove the 'nav-cta-active' class if scrolled back up
         navMain.classList.remove('nav-cta-active');
+        navLogo.style.width = '150px';
     }
 });
 
@@ -46,5 +49,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Attach the function to window's scroll event
     window.addEventListener('scroll', toggleNavClassBasedOnScroll);
 });
+
 
 console.log("js end");
