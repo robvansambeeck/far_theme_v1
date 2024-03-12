@@ -1,7 +1,7 @@
 <div id="nav-main" class="nav-main">
     <div class="nav-inner container">
         <div class="nav-items">
-            <div class="col nav-toggle">
+            <div class="col nav-toggle" id="nav-toggle">
                 <i class="fa-light fa-bars"></i>
             </div>
             <div class="col nav-logo">
@@ -26,3 +26,4 @@
     </div>
 </div>
 <!-- /nav-main -->
+<?php get_template_part('parts/nav-sidebar'); ?>

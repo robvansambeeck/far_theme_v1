@@ -9,17 +9,17 @@ console.log("js start");
 window.addEventListener('scroll', function() {
     // Get the navigation element by its class name
     var navMain = document.querySelector('.nav-main');
-    var navLogo = document.querySelector('.nav-logo');
+    // var navLogo = document.querySelector('.nav-logo');
 
     // Check if the page is scrolled more than 400 pixels
     if (window.scrollY > 500) {
         // Add the 'nav-cta-active' class to the nav-main element
         navMain.classList.add('nav-cta-active');
-        navLogo.style.width = '100px';
+        // navLogo.style.width = '100px';
     } else {
         // Remove the 'nav-cta-active' class if scrolled back up
         navMain.classList.remove('nav-cta-active');
-        navLogo.style.width = '150px';
+        // navLogo.style.width = '150px';
     }
 });
 
@@ -50,5 +50,50 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', toggleNavClassBasedOnScroll);
 });
 
+  // nav-sidebar 
+  if(document.getElementsByClassName("nav-main")){
+  
+    let navMain = document.getElementById("nav-toggle");
+    let navSidebar = document.getElementById("nav-sidebar");
+    let navOverlay = document.getElementById("nav-sidebar-overlay");
+  
+    navMain.onclick = function(){
+      navSidebar.classList.add('nav-open');
+      navOverlay.classList.add('nav-overlay-open');
+    };
+  
+    // When user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == navOverlay) {
+      navSidebar.classList.remove('nav-open');
+      navOverlay.classList.remove('nav-overlay-open');
+    }
+  } 
+    }
+  
+    if(document.getElementById("nav-sidebar-toggle")){
+    
+      let toggleSidebar = document.getElementById("nav-sidebar-toggle");
+      let navSidebar = document.getElementById("nav-sidebar");
+      let navOverlay = document.getElementById("nav-sidebar-overlay");
+  
+      toggleSidebar.onclick = function(){
+        console.log('nav-sidebar works');
+        navSidebar.classList.remove('nav-open');
+        navOverlay.classList.remove('nav-overlay-open');
+      };
+      }
+  
+  // toggle submenu    
+  let hoofdMenu = document.querySelectorAll('.hoofd-menu');
+  
+  var myFunction = function() {
+    var childNode = this.querySelector('.sub-menu');
+    childNode.classList.toggle('open-submenu');
+  };
+  
+  for (var i = 0; i < hoofdMenu.length; i++) {
+    hoofdMenu[i].addEventListener('click', myFunction);
+  }
 
 console.log("js end");
