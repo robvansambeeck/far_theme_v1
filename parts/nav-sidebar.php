@@ -9,11 +9,9 @@
         </div>
         <nav role="navigation" class="sec-content nav-items">
             <div class="nav-items-inner">
-                <?php wp_nav_menu(
-                    array(
-                        'theme_location' => 'main',
-                    )
-                ); ?>
+                <?php
+                wp_nav_menu(array('theme_location' => 'side-menu'));
+                ?>
             </div>
         </nav>
 
