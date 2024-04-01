@@ -23,6 +23,24 @@ window.addEventListener('scroll', function() {
     }
 });
 
+// nav-main enlarge home for seconds
+
+// Wait for the DOM to fully load
+document.addEventListener('DOMContentLoaded', (event) => {
+  // Set a timeout to run after 5 seconds
+  setTimeout(() => {
+      // Find the element with the class 'nav-main-logo'
+      const logoElement = document.querySelector('.nav-logo');
+      
+      // Check if the element exists to avoid null reference errors
+      if (logoElement) {
+          // Add the 'logo-smaller' class to the element
+          logoElement.classList.add('logo-smaller');
+      }
+  }, 3000); // 5000 milliseconds = 5 seconds
+});
+
+
 // nav-main > nav-logo enlarged when on page over ons
 document.addEventListener('DOMContentLoaded', function() {
     var targetClass = 'nav-logo-large';

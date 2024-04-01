@@ -101,6 +101,7 @@ meter {
 .page-wrapper {
   margin-top: -15vh;
 }
+
 .container {
   max-width: 1800px;
   margin: 0 auto;
@@ -115,6 +116,16 @@ meter {
 
 .wp-block-columns {
   grid-gap: 60px;
+}
+
+@media only screen and (max-width: 1000) {
+  .wp-block-cover {
+    min-height: initial !important;
+  }
+}
+
+.text-left {
+  text-align: left;
 }
 
 body {
@@ -222,9 +233,8 @@ strong {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
-  height: 14vh;
-  max-height: 200px;
-  padding: 30px 0;
+  max-height: 400px;
+  padding: 8px 0;
 }
 .nav-main .nav-items .col {
   display: flex;
@@ -232,13 +242,17 @@ strong {
 .nav-main .nav-items .nav-toggle {
   justify-content: flex-start;
 }
+.nav-main .nav-items .nav-toggle i {
+  font-size: 2rem;
+}
 .nav-main .nav-items .nav-logo {
   justify-content: center;
   overflow: hidden;
 }
 .nav-main .nav-items .nav-logo img {
-  height: 110px;
-  width: 110px;
+  height: 200px;
+  width: 200px;
+  transition: all 600ms linear;
 }
 @media only screen and (max-width: 768px) {
   .nav-main .nav-items .nav-logo img {
@@ -259,6 +273,11 @@ strong {
 }
 .nav-cta-active .nav-cta .btn {
   display: block !important;
+}
+
+.logo-smaller img {
+  height: 160px !important;
+  width: 160px !important;
 }
 
 .nav-logo-large .nav-logo {
