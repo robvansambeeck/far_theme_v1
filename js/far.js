@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
           // Add the 'logo-smaller' class to the element
           logoElement.classList.add('logo-smaller');
       }
-  }, 3000); // 5000 milliseconds = 5 seconds
+  }, 2000); // 5000 milliseconds = 5 seconds
 });
 
 
