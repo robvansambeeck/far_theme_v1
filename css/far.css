@@ -602,10 +602,10 @@ strong {
 .block-timetable ul {
   display: inline-block;
   text-align: left;
-  line-height: 30px;
 }
 .block-timetable ul li {
   list-style: none;
+  line-height: 30px;
 }
 .block-timetable .wp-block-column:nth-child(1) {
   background-color: #fdf8f2;

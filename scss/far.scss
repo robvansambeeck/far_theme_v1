@@ -673,9 +673,9 @@ background-color: $color-bg-dark;
     ul {
         display: inline-block;
         text-align: left;
-        line-height: 30px;
         li {
             list-style: none;
+            line-height: 30px;
         }
     }
     // Target the first .wp-block-column specifically
