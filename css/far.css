@@ -605,7 +605,7 @@ strong {
 }
 .block-timetable ul li {
   list-style: none;
-  line-height: 30px;
+  line-height: 40px;
 }
 .block-timetable .wp-block-column:nth-child(1) {
   background-color: #fdf8f2;
