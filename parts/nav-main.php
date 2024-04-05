@@ -16,8 +16,8 @@
                 ?>
             </div>
             <div class="col nav-cta">
-                <a href="/tickets" class="btn btn-fill">
-                    Tickets
+                <a href="/entree" class="btn btn-fill">
+                    Entree
                 </a>
             </div>
         </div>

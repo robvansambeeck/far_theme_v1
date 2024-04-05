@@ -670,6 +670,13 @@ background-color: $color-bg-dark;
 }
 
 .block-timetable {
+    ul {
+        display: inline-block;
+        text-align: left;
+        li {
+            list-style: none;
+        }
+    }
     // Target the first .wp-block-column specifically
     .wp-block-column:nth-child(1) {
         background-color: $color-light; // Example: Set the background color to blue for the second column

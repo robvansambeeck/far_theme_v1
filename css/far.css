@@ -599,6 +599,13 @@ strong {
   margin: 0;
 }
 
+.block-timetable ul {
+  display: inline-block;
+  text-align: left;
+}
+.block-timetable ul li {
+  list-style: none;
+}
 .block-timetable .wp-block-column:nth-child(1) {
   background-color: #fdf8f2;
 }
