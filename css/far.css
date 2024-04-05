@@ -602,6 +602,7 @@ strong {
 .block-timetable ul {
   display: inline-block;
   text-align: left;
+  line-height: 30px;
 }
 .block-timetable ul li {
   list-style: none;
