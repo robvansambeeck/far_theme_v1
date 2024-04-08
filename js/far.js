@@ -3,6 +3,27 @@
 /// ////////////////////
 console.log("js start");
 
+var swiper = new Swiper(".swiper", {
+  slidesPerView: 6,
+  spaceBetween: 10,
+  loop: true,
+  breakpoints: {
+      640: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+      },
+      768: {
+          slidesPerView: 4,
+          spaceBetween: 30,
+      },
+      1024: {
+          slidesPerView: 6,
+          spaceBetween: 30,
+      },
+  },
+});
+
+
 // nav-main > nav-cta active when scrolled
 
 // Listen for the scroll event on the window
@@ -113,5 +134,7 @@ document.addEventListener('DOMContentLoaded', function() {
   for (var i = 0; i < hoofdMenu.length; i++) {
     hoofdMenu[i].addEventListener('click', myFunction);
   }
+
+
 
 console.log("js end");

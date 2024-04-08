@@ -30,6 +30,16 @@ function register_acf_block_types()
         'icon' => 'admin-comments',
         'keywords' => array('Block', 'right', 'tekst'),
     ));
+    acf_register_block_type(array(
+        'name' => 'block-swiper',
+        'title' => __('block-swiper'),
+        'description' => __('Blok waarin een swiper met afbeeldingen komt'),
+        'render_template' => 'parts/blocks/block-swiper.php',
+        'mode' => 'edit',
+        'category' => 'formatting',
+        'icon' => 'admin-comments',
+        'keywords' => array('Block', 'right', 'tekst'),
+    ));
 }
 
 add_action('acf/init', 'register_acf_block_types');
