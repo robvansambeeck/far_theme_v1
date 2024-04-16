@@ -8,6 +8,21 @@ ADMIN ENQUEUE FUNCTIONS
 */
 
 /* FRONT-END SCRIPTS */
+
+function theme_enqueue_swiper()
+{
+    // Register Swiper JS
+    wp_register_script('swiper-js', 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js', array(), null, true);
+
+    // Register Swiper CSS
+    wp_register_style('swiper-css', 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css', array(), null, 'all');
+
+    // Enqueue the registered scripts and styles
+    wp_enqueue_script('swiper-js');
+    wp_enqueue_style('swiper-css');
+}
+
+add_action('wp_enqueue_scripts', 'theme_enqueue_swiper');
 function far_script_enqueue()
 {
     //fonts and icons

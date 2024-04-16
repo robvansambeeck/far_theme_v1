@@ -111,7 +111,7 @@ meter {
 ////////////////////////
 
 //layout
-$container-base: 1170px;
+$container-base: 1250px;
 
 //spacing
 $padding-base: 15px;
@@ -284,6 +284,18 @@ li {
 strong {
     font-weight: $font-bold;
 }
+
+////////////////////////
+/// width
+////////////////////////
+.w-70 {
+    width: 70%;
+    margin: 0 auto;
+    @media only screen and (max-width: 768px) {
+      width: 100%;
+    }
+  }
+
 
 ////////////////////////
 /// navigation
@@ -655,7 +667,7 @@ background-color: $color-bg-dark;
 
 .block-logo {
     display: grid !important; 
-    grid-template-columns: repeat(4, 1fr) !important;
+    grid-template-columns: repeat(5, 1fr) !important;
     grid-gap: $padding-base*4;
     filter: grayscale(1);
     @media only screen and (max-width: 850px) {
@@ -677,7 +689,7 @@ background-color: $color-bg-dark;
     
     // Target the second .wp-block-column
     .wp-block-column:nth-child(2) {
-        background-color: $color-medium; // Example: Set the background color to blue for the second column
+        // background-color: $color-medium; // Example: Set the background color to blue for the second column
     }
     
     // Target the third .wp-block-column
@@ -686,9 +698,10 @@ background-color: $color-bg-dark;
     }
 
     .wp-block-column {
-        background-color: $color-cta; // Applies to all .wp-block-column but will be overridden for the first, second, and third children by the rules above
+        background-color: $color-light; // Applies to all .wp-block-column but will be overridden for the first, second, and third children by the rules above
         border-radius: 180px;
     }
+
 }
 
 // wp block
@@ -703,6 +716,20 @@ background-color: $color-bg-dark;
     }
 }
 
+.wp-block-group {
+    span {
+        padding-left: 2rem;
+    }
+    ul {
+        line-height: 60px;
+        text-align: left;
+    }
+    li {
+        list-style: none;
+    }
+}
+
+
 
 ////////////////////////
 /// forms
@@ -710,4 +737,24 @@ background-color: $color-bg-dark;
 
 .gform_wrapper .gform_title {
     display: none;
+}
+
+////////////////////////
+/// swiper
+////////////////////////
+
+.swiper {
+    width: 100%;
+    @media only screen and (max-width: 768px) {
+        width: 100%;
+    }
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    filter: grayscale(1);
+    img {
+        max-width: 50%;
+    }
+}
+
 }
