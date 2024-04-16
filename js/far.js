@@ -7,13 +7,16 @@ var swiper = new Swiper(".swiper", {
   slidesPerView: 6,
   spaceBetween: 10,
   loop: true,
+  autoplay: {
+		delay: 3000,
+	},
   breakpoints: {
       640: {
           slidesPerView: 3,
           spaceBetween: 30,
       },
       768: {
-          slidesPerView: 4,
+          slidesPerView: 3,
           spaceBetween: 30,
       },
       1024: {

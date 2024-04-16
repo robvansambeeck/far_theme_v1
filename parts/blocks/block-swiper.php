@@ -16,12 +16,12 @@
                 <?php endif; ?>
 
             </div>
-            <div class="swiper-button-next">
+            <!-- <div class="swiper-button-next">
                 <i class="fa-sharp fa-regular fa-chevron-right"></i>
             </div>
             <div class="swiper-button-prev">
                 <i class="fa-sharp fa-regular fa-chevron-left"></i>
-            </div>
+            </div> -->
             <div class="swiper-pagination-normal"></div>
         </div>
     </div>

@@ -111,7 +111,7 @@ meter {
 ////////////////////////
 
 //layout
-$container-base: 1170px;
+$container-base: 1250px;
 
 //spacing
 $padding-base: 15px;
@@ -375,6 +375,18 @@ li {
 strong {
     font-weight: $font-bold;
 }
+
+////////////////////////
+/// width
+////////////////////////
+.w-70 {
+    width: 70%;
+    margin: 0 auto;
+    @media only screen and (max-width: 768px) {
+      width: 100%;
+    }
+  }
+
 
 ////////////////////////
 /// navigation
@@ -742,7 +754,7 @@ background-color: $color-bg-dark;
 
 .block-logo {
     display: grid !important; 
-    grid-template-columns: repeat(4, 1fr) !important;
+    grid-template-columns: repeat(5, 1fr) !important;
     grid-gap: $padding-base*4;
     filter: grayscale(1);
     @media only screen and (max-width: 850px) {
@@ -772,7 +784,7 @@ background-color: $color-bg-dark;
     
     // Target the second .wp-block-column
     .wp-block-column:nth-child(2) {
-        background-color: $color-medium; // Example: Set the background color to blue for the second column
+        // background-color: $color-medium; // Example: Set the background color to blue for the second column
     }
     
     // Target the third .wp-block-column
@@ -781,9 +793,10 @@ background-color: $color-bg-dark;
     }
 
     .wp-block-column {
-        background-color: $color-cta; // Applies to all .wp-block-column but will be overridden for the first, second, and third children by the rules above
+        background-color: $color-light; // Applies to all .wp-block-column but will be overridden for the first, second, and third children by the rules above
         border-radius: 180px;
     }
+
 }
 
 // wp block
@@ -798,92 +811,19 @@ background-color: $color-bg-dark;
     }
 }
 
-// block-swiper
-
-.block-swiper {
-    .swiper-slide {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: auto 0;
-        img {
-            width: 100px;
-            height: auto;
-        }
+.wp-block-group {
+    span {
+        padding-left: 2rem;
+    }
+    ul {
+        line-height: 60px;
+        text-align: left;
+    }
+    li {
+        list-style: none;
     }
 }
 
-
-/*
-==================================
-Swiper
-==================================
-*/
-
-.swiper {
-    width: 100%;
-    height: 100%;
-  }
-  
-  .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .swiper {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .swiper-button-prev:after,
-  .swiper-button-next:after {
-    content: "";
-  }
-  
-  .swiper-button-prev,
-  .swiper-button-next {
-    i {
-      color: $color-txt-light;
-      font-size: 2rem;
-    }
-  }
-  
-  .swiper-pagination-normal {
-    position: absolute;
-    text-align: center;
-    transition: .3s opacity;
-    transform: translate3d(0, 0, 0);
-    z-index: 10;
-  }
-  
-  .swiper-pagination-bullet {
-    background-color: $color-txt-light;
-    opacity: 100;
-  }
-  
-  .swiper-pagination-bullet-active {
-    background-color: $color-cta;
-  }
-
-.swiper-pagination-objects {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 15px 25px;
-  i {
-    font-size: 1.2rem;
-  }
-}
 
 
 ////////////////////////
@@ -892,4 +832,24 @@ Swiper
 
 .gform_wrapper .gform_title {
     display: none;
+}
+
+////////////////////////
+/// swiper
+////////////////////////
+
+.swiper {
+    width: 100%;
+    @media only screen and (max-width: 768px) {
+        width: 100%;
+    }
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    filter: grayscale(1);
+    img {
+        max-width: 50%;
+    }
+}
+
 }
