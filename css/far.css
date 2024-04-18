@@ -302,7 +302,7 @@ li {
   list-style-position: inside;
   list-style-type: disc;
   font-weight: 200;
-  font-size: 1.25rem !important;
+  font-size: 1.25rem;
 }
 
 strong {
