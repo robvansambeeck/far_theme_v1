@@ -1,5 +1,5 @@
 <div class="block block-swiper">
-    <div class="block-inner">
+    <div class="block-inner container">
         <div class="swiper blockSwiper">
             <div class="swiper-wrapper">
                 <?php

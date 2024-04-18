@@ -40,6 +40,16 @@ function register_acf_block_types()
         'icon' => 'admin-comments',
         'keywords' => array('Block', 'right', 'tekst'),
     ));
+    acf_register_block_type(array(
+        'name' => 'block-hoofd-sponsor',
+        'title' => __('block-hoofd-sponsor'),
+        'description' => __('Blok waarin de hoofdsponsoren komen'),
+        'render_template' => 'parts/blocks/block-hoofd-sponsor.php',
+        'mode' => 'edit',
+        'category' => 'formatting',
+        'icon' => 'admin-comments',
+        'keywords' => array('Block', 'sponsor', 'hoofd', 'logo'),
+    ));
 }
 
 add_action('acf/init', 'register_acf_block_types');

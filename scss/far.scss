@@ -824,6 +824,26 @@ background-color: $color-bg-dark;
     }
 }
 
+.block-hoofdsponsor {
+    .block-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(25%, 1fr)); // Creates as many columns as fit, each at least 50% wide
+        @media only screen and (max-width: 992px) {
+            grid-template-columns: repeat(auto-fill, minmax(50%, 1fr)); // Creates as many columns as fit, each at least 50% wide
+        }
+        .card-sponsor {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        img {
+            width: 100%; // Ensures the image takes up the full width of its container
+            height: auto; // Maintains the aspect ratio of the image
+            max-width: 200px; // Limits the maximum width to prevent overly large images
+        }
+    }
+}
+
 
 
 ////////////////////////
@@ -844,8 +864,10 @@ background-color: $color-bg-dark;
         width: 100%;
     }
 .swiper-slide {
+    height: 200px;
     display: flex;
     justify-content: center;
+    align-items: center;
     filter: grayscale(1);
     img {
         max-width: 50%;

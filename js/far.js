@@ -4,7 +4,7 @@
 console.log("js start");
 
 var swiper = new Swiper(".swiper", {
-  slidesPerView: 6,
+  slidesPerView: 2,
   spaceBetween: 10,
   loop: true,
   autoplay: {
@@ -16,10 +16,18 @@ var swiper = new Swiper(".swiper", {
           spaceBetween: 30,
       },
       768: {
-          slidesPerView: 3,
+          slidesPerView: 4,
           spaceBetween: 30,
       },
-      1024: {
+      850: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+    },
+      1000: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+    },
+      1200: {
           slidesPerView: 6,
           spaceBetween: 30,
       },
