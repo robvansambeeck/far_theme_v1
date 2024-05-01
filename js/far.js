@@ -11,20 +11,20 @@ var swiper = new Swiper(".swiper", {
 		delay: 3000,
 	},
   breakpoints: {
-     420: {
-          slidesPerView: 2,
+    350: {
+          slidesPerView: 1,
           spaceBetween: 20,
       },
       640: {
-          slidesPerView: 3,
+          slidesPerView: 2,
           spaceBetween: 30,
       },
       768: {
-          slidesPerView: 3,
+          slidesPerView: 2,
           spaceBetween: 30,
       },
       1024: {
-          slidesPerView: 6,
+          slidesPerView: 3,
           spaceBetween: 30,
       },
   },
