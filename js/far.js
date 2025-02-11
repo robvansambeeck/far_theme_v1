@@ -4,31 +4,27 @@
 console.log("js start");
 
 var swiper = new Swiper(".swiper", {
-  slidesPerView: 2,
+  slidesPerView: 6,
   spaceBetween: 10,
   loop: true,
   autoplay: {
 		delay: 3000,
 	},
   breakpoints: {
+    350: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+      },
       640: {
-          slidesPerView: 3,
+          slidesPerView: 2,
           spaceBetween: 30,
       },
       768: {
-          slidesPerView: 4,
+          slidesPerView: 2,
           spaceBetween: 30,
       },
-      850: {
-        slidesPerView: 4,
-        spaceBetween: 30,
-    },
-      1000: {
-        slidesPerView: 4,
-        spaceBetween: 30,
-    },
-      1200: {
-          slidesPerView: 6,
+      1024: {
+          slidesPerView: 3,
           spaceBetween: 30,
       },
   },
