@@ -70,24 +70,24 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 
 // nav-main > nav-logo enlarged when on page over ons
-document.addEventListener('DOMContentLoaded', function() {
-    var targetClass = 'nav-logo-large';
-    var navMain = document.getElementById('nav-main');
+// document.addEventListener('DOMContentLoaded', function() {
+//     var targetClass = 'nav-logo-large';
+//     var navMain = document.getElementById('nav-main');
 
-    function toggleNavClassBasedOnScroll() {
-        // Check if the page's current scroll position is within the first 500px
-        if (window.scrollY <= 500 && window.location.pathname === '/over-ons/') {
-            // Ensure the element exists and doesn't already have the class
-            if (navMain && !navMain.classList.contains(targetClass)) {
-                navMain.classList.add(targetClass);
-            }
-        } else {
-            // If scrolled beyond 500px, remove the class
-            if (navMain && navMain.classList.contains(targetClass)) {
-                navMain.classList.remove(targetClass);
-            }
-        }
-    }
+//     function toggleNavClassBasedOnScroll() {
+//         // Check if the page's current scroll position is within the first 500px
+//         if (window.scrollY <= 500 && window.location.pathname === '/over-ons/') {
+//             // Ensure the element exists and doesn't already have the class
+//             if (navMain && !navMain.classList.contains(targetClass)) {
+//                 navMain.classList.add(targetClass);
+//             }
+//         } else {
+//             // If scrolled beyond 500px, remove the class
+//             if (navMain && navMain.classList.contains(targetClass)) {
+//                 navMain.classList.remove(targetClass);
+//             }
+//         }
+//     }
 
     // Call the function initially in case the page is already scrolled when loaded
     toggleNavClassBasedOnScroll();
