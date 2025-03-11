@@ -420,8 +420,8 @@ strong {
             justify-content: center;
             overflow: hidden;
             img {
-                height: 175px;
-                width: 175px;
+                height: 150px;
+                width: 150px;
                 transition: all 600ms linear;
                 @media only screen and (max-width: 768px) {
                    height: 60px;
@@ -456,8 +456,8 @@ strong {
 
 .logo-smaller {
     img {
-        height: 160px !important;
-        width: 160px !important;
+        height: 125px !important;
+        width: 125px !important;
         @media only screen and (max-width: 1000px) {
             height: 90px !important;
             width: auto !important;

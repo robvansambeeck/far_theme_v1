@@ -350,8 +350,8 @@ strong {
   overflow: hidden;
 }
 .nav-main .nav-items .nav-logo img {
-  height: 175px;
-  width: 175px;
+  height: 150px;
+  width: 150px;
   transition: all 600ms linear;
 }
 @media only screen and (max-width: 768px) {
@@ -381,8 +381,8 @@ strong {
 }
 
 .logo-smaller img {
-  height: 160px !important;
-  width: 160px !important;
+  height: 125px !important;
+  width: 125px !important;
 }
 @media only screen and (max-width: 1000px) {
   .logo-smaller img {
