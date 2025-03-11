@@ -89,12 +89,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
 //         }
 //     }
 
-    // Call the function initially in case the page is already scrolled when loaded
-    toggleNavClassBasedOnScroll();
+//     // Call the function initially in case the page is already scrolled when loaded
+//     toggleNavClassBasedOnScroll();
 
-    // Attach the function to window's scroll event
-    window.addEventListener('scroll', toggleNavClassBasedOnScroll);
-});
+//     // Attach the function to window's scroll event
+//     window.addEventListener('scroll', toggleNavClassBasedOnScroll);
+// });
 
   // nav-sidebar 
   if(document.getElementsByClassName("nav-main")){
