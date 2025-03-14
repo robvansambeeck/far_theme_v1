@@ -50,6 +50,16 @@ function register_acf_block_types()
         'icon' => 'admin-comments',
         'keywords' => array('Block', 'sponsor', 'hoofd', 'logo'),
     ));
+    acf_register_block_type(array(
+        'name' => 'block-hero',
+        'title' => __('block-hero'),
+        'description' => __('Blok bovenaan de home page'),
+        'render_template' => 'parts/blocks/block-hero.php',
+        'mode' => 'edit',
+        'category' => 'formatting',
+        'icon' => 'admin-comments',
+        'keywords' => array('Block', 'home', 'hero'),
+    ));
 }
 
 add_action('acf/init', 'register_acf_block_types');

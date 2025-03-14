@@ -40,7 +40,7 @@ window.addEventListener('scroll', function() {
     // var navLogo = document.querySelector('.nav-logo');
 
     // Check if the page is scrolled more than 400 pixels
-    if (window.scrollY > 500) {
+    if (window.scrollY > 100) {
         // Add the 'nav-cta-active' class to the nav-main element
         navMain.classList.add('nav-cta-active');
         // navLogo.style.width = '100px';

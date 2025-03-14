@@ -15,7 +15,8 @@ function far_theme_setup()
     array(
       'header-menu' => __('Main Menu'),
       'footer-menu' => __('Footer Menu'),
-      'side-menu' => __('Side Menu')
+      'side-menu' => __('Side Menu'),
+      'desktop-menu' => __('Desktop Menu')
     )
   );
 }

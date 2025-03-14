@@ -405,7 +405,7 @@ strong {
         display: grid;
         grid-template-columns: repeat(3,1fr);
         align-items: center;
-        max-height: 400px;
+        max-height: 150px;
         padding: 8px 0;
         .col {
             display: flex;
@@ -432,7 +432,11 @@ strong {
         .nav-cta {
             justify-content: flex-end;
             .btn {
-                display: none;
+                display: block;
+                @media only screen and (max-width: 768px) {
+                    min-width: 125px;
+                    width: 125px;
+                 }
             }
         }
     }
@@ -453,7 +457,6 @@ strong {
 }
 
 // nav logo smaller 
-
 .logo-smaller {
     img {
         height: 125px !important;
@@ -466,7 +469,6 @@ strong {
 }
 
 // nav-logo large when on page over ons
-
 .nav-logo-large {
     .nav-logo {
         display: none !important;
@@ -565,8 +567,23 @@ strong {
     display: block !important; 
 }
 
+.nav-desktop {
+    .nav-items-inner {
+        ul {
+            display: flex;
+            justify-content: space-between;
+            li {
+                list-style: none;
+                a {
+                    height: 15%;
+                    color: $color-txt-dark;
+                }
+            }
+        }
+    }
+}
 
-  //footer
+//footer
 .nav-footer { 
 background-color: $color-bg-dark;
 .nav-items {
@@ -668,14 +685,68 @@ background-color: $color-bg-dark;
     background-color: $color-bg-light;
     iframe {
         width: 100%;
-        height: 75vh;
+        height: 65vh;
     }
 } 
+
+.block-hero {
+    overflow: hidden;
+    .block-inner {
+    min-height: 70vh;
+     position: relative;  
+     @media only screen and (max-width: 1170px) {
+        max-height: 50vh;
+    }
+    }
+    .bg {
+        z-index: $z-bg;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    .wrapper {
+        left: 0;
+        top: 0;
+        position: absolute;
+        height: 100% !important;
+        width: 100%;
+    }
+    .col-txt {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .inner {
+            max-width: 500px;
+        }
+        .btn {
+            margin: 0 auto;
+        }
+        h1 {
+            color: $color-txt-light;
+            font-size: 36px;
+            line-height: 50px;
+            padding: 8px 0;
+        }
+        h2 {
+            color: $color-txt-light;
+        }
+        p {
+            color: $color-txt-light;
+            padding: $padding-base 0;
+        }
+    }
+}
 
 .block-txt-right,
 .block-txt-left
  {
-
     overflow: hidden;
     .block-inner {
      height: 100%;
